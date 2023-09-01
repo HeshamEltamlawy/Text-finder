@@ -1,0 +1,450 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    height: 100%;
+    width: 100%;
+    font-weight: 400;
+    overflow: hidden;
+}
+
+h1 {
+
+    font-size: 16px;
+
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+section {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 110px 100px;
+}
+
+@media(max-width:1000px) {
+    section {
+        padding: 100px 50px;
+
+    }
+}
+
+@media(max-width:600px) {
+    section {
+        padding: 125px 30px;
+    }
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 100px 0;
+}
+
+header a {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #262626;
+}
+
+header h2 {
+    text-transform: uppercase;
+}
+
+header .nav {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+}
+
+header .nav .li-up {
+    margin: 0 15px;
+
+}
+
+header.nav .li-up:first-child {
+    margin-left: 0;
+}
+
+header.nav .li-up:last-child {
+    margin-right: 0;
+}
+
+@media(max-width:1000px) {
+    header {
+        padding: 20px 50px;
+    }
+}
+
+@media(max-width:700px) {
+    header {
+        flex-direction: column;
+    }
+
+    header h2 {
+        margin-bottom: 15px;
+    }
+
+    header .nav .li-up {
+        width: 30%;
+
+        margin: 0 7px;
+    }
+
+}
+
+.box {
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    margin: 140px 0 0 0;
+}
+
+
+@media(max-width:700px) {
+    .box .h-form {
+        min-height: 600px;
+        width: 400px;
+        padding-left: 80px;
+        margin-top: 30px;
+    }
+
+    .box  h1 {
+        font-size: 12px;
+    }
+
+    .box span {
+        font-size: 12px;
+    }
+
+    .box .container {
+        padding: 5%;
+    }
+
+    .box input[name='text'] {
+        font-size: 12px;
+        text-align: center;
+
+    }
+
+    .box .h-text-area[name='text'] {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .box .h-button {
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        padding: 12px 12px;
+        margin-left: calc(60%);
+
+
+    }
+}
+
+@media(min-width:1000px) {
+    .box .h-button {
+        margin-left: calc(70%);
+
+    }
+    .set-message .message-box {
+        margin-top: -20px;
+        margin-left: 80px;
+        font-size: 12px;
+
+    }
+
+    .box .h-form {
+        min-height: 600px;
+        width: 80%;
+        padding-left: 80px;
+        margin-top: -60px;
+    }
+
+
+
+}
+
+@media(max-width:1000px) {
+    .set-message .message-box {
+        margin-left: 60px;
+        font-size: 12px;
+
+    }
+
+    .box .h-button {
+        margin-left: calc(58%);
+
+    }
+}
+
+@media(max-width:600px) {
+    .set-message .message-box {
+        margin-left: 400px;
+        font-size: 8px;
+
+    }
+}
+
+@media(max-width:500px) {
+    .set-message .message-box {
+        margin-left: 260px;
+        font-size: 4px;
+        margin-top: 10px;
+
+    }
+
+    .box .h-form {
+        min-height: 600px;
+        width: 400px;
+        padding-left: 80px;
+        margin-top: 40px;
+    }
+
+
+
+
+}
+
+
+@keyframes slideInDown {
+    from {
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes jackInTheBox {
+    from {
+        opacity: 0;
+        transform: scale(0.1) rotate(30deg);
+        transform-origin: center bottom;
+    }
+
+    50% {
+        transform: rotate(-10deg);
+    }
+
+    70% {
+        transform: rotate(3deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes lightIn {
+    from {
+        color: #000000;
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        color: #f00;
+        font-weight: bolder;
+    }
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+span {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #333333;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+.message-box {
+    position: absolute;
+    width: min-content;
+    height: fit-content;
+    display: block;
+    padding: 10px;
+    background: white;
+    margin-left: 150px;
+    font-weight: bold;
+    margin-top: 120px;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+    animation-name: jackInTheBox;
+    animation-duration: 4.5s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear;
+    animation-iteration-count: calc(1);
+    opacity: 0;
+    z-index: 3;
+
+}
+
+.m-color-true {
+    border: 1px solid #04a3ff;
+    border-bottom: 3px solid #04a3ff;
+
+}
+
+.m-color-false {
+    border: 1px solid #f00;
+    border-bottom: 3px solid #f00;
+
+}
+
+.color-false {
+    color: #f00 !important;
+
+}
+
+.color-true {
+    color: #04a3ff;
+
+}
+
+
+.m-text {
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+
+.h-form {
+    width: 70%;
+    padding: 30px;
+    text-align: center;
+}
+
+.ul-down {
+    padding: 0;
+    margin-top: 0;
+}
+
+
+li {
+    list-style: none;
+
+}
+
+.ul-down .li-down {
+    padding: 5px;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    clear: both;
+}
+
+input[name='text'],
+textarea[name='text'] {
+    width: 80%;
+    border: 0;
+    color: #333333;
+    font-size: 16px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background: #eeeeee;
+
+}
+
+.h-text-box {
+    height: 50px;
+}
+
+
+textarea {
+    height: 320px;
+    min-height: 300px;
+
+}
+
+.h-button {
+    color: #04a3ff;
+    background: 0 0;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-decoration: none;
+    padding: 12px 20px;
+    border: 1px solid #04a3ff;
+    text-transform: uppercase;
+    border-radius: 4px;
+
+
+    &:hover {
+        background-color: #04a3ff;
+        color: #333333;
+    }
+}
+
+.container {
+    padding: 10px 30px ;
+    color: #333333;
+    background-color: #eeeeee;
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    clear: both;
+
+}
+
+.h-count {
+    animation-name: lightIn;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
